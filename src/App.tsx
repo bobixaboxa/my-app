@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, Dialog, DialogActions, DialogBody, DialogContent, DialogSurface, DialogTitle, DialogTrigger } from '@fluentui/react-components';
+import { Button, Dialog, DialogActions, DialogBody, DialogContent, DialogSurface, DialogTitle, DialogTrigger, FluentProvider, webLightTheme } from '@fluentui/react-components';
 
 function App() {
   return (
+      <FluentProvider theme={webLightTheme}>
         <Dialog>
           <DialogTrigger disableButtonEnhancement>
             <Button>Open dialog</Button>
@@ -27,6 +28,7 @@ function App() {
             </DialogBody>
           </DialogSurface>
         </Dialog>
+      </FluentProvider>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
